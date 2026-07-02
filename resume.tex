@@ -1,10 +1,10 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames, dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -19,134 +19,102 @@
 \raggedright
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-7pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+\titleformat{\section}{ \vspace{-7pt}\scshape\raggedright\large\bfseries }{}{0em}{}[
+\color{black}
+\titlerule
+\vspace{-4pt}
+]
 
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-6pt}
+\vspace{-1pt}
+\item
+\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1}       & #2                 \\
+    \textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-6pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-6pt}
+\newcommand{\resumeProjectHeading}[2]{ \item
+\begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+\end{tabular*}
+\vspace{-6pt}
 }
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-4pt}}
 
 \begin{document}
+    %----------HEADING----------
+    \begin{center}
+        {\Huge {\textbf{Ewanretor Giwa-Okugbe}} \\ \vspace{6pt} \small \href{mailto:ewanretorokugbe@gmail.com}{ewanretorokugbe@gmail.com} \,$\cdot$\, \href{https://github.com/notxorand}{github.com/notxorand} \,$\cdot$\, \href{https://notxorand.dev}{notxorand.dev} \,$\cdot$\, \href{https://linkedin.com/in/ewanretorokugbe}{linkedin.com/in/ewanretorokugbe} \\ \vspace{2pt} \small \textbf{Remote (GMT+1/CET/CEST) $\cdot$ Open to Relocation} }
+    \end{center}
 
-%----------HEADING----------
-\begin{center}
-    {\Huge {\textbf{Ewanretor Giwa-Okugbe}} \\ \vspace{6pt}
-    \small
-    \href{mailto:ewanretorokugbe@gmail.com}{ewanretorokugbe@gmail.com} \,$\cdot$\,
-    \href{https://github.com/notxorand}{github.com/notxorand} \,$\cdot$\,
-    \href{https://notxorand.dev}{notxorand.dev} \,$\cdot$\,
-    \href{https://linkedin.com/in/ewanretorokugbe}{linkedin.com/in/ewanretorokugbe} \\ \vspace{2pt}
-    \small \textbf{Remote (GMT+1/CET/CEST) $\cdot$ Open to Relocation}
-    }
-\end{center}
+    %-----------SYSTEMS ENGINEERING-----------
+    \section{Systems Engineering Experience}
+    \resumeSubHeadingListStart
 
-%-----------SYSTEMS ENGINEERING-----------
-\section{Systems Engineering Experience}
-  \resumeSubHeadingListStart
+    \resumeSubheading {Slung}{\href{https://slung.tech}{slung.tech} \,$\cdot$\, 2026 -- Present}
+    {Core Maintainer \& Co-Author}{Open Source} \resumeItemListStart \resumeItem{Designed and implemented an ontology-driven compute engine built on an Entity Component System (ECS) model, where data sources are first-class entities and rules fire automatically as component facts change.}
+    \resumeItem{Engineered implicit orchestration via reactive fact propagation: dirty components trigger rule re-evaluation and cascade updates across the entire system without explicit wiring.}
+    \resumeItem{Developed a compiler pipeline that translates rules down to WebAssembly targets for language-agnostic, edge-deployable execution.}
+    \resumeItem{Engineered the low-latency execution host in Zig from scratch and published the official Rust SDK to \href{https://docs.rs/slung}{docs.rs/slung}; ships as a lightweight single binary deployable anywhere.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Slung}{\href{https://slung.tech}{slung.tech} \,$\cdot$\, 2026 -- Present}
-      {Core Maintainer \& Co-Author}{Open Source}
-      \resumeItemListStart
-        \resumeItem{Designed and implemented an ontology-driven compute engine built on an Entity Component System (ECS) model, where data sources are first-class entities and rules fire automatically as component facts change.}
-        \resumeItem{Engineered implicit orchestration via reactive fact propagation: dirty components trigger rule re-evaluation and cascade updates across the entire system without explicit wiring.}
-        \resumeItem{Developed a compiler pipeline that translates rules down to WebAssembly targets for language-agnostic, edge-deployable execution.}
-        \resumeItem{Engineered the low-latency execution host in Zig from scratch and published the official Rust SDK to \href{https://docs.rs/slung}{docs.rs/slung}; ships as a lightweight single binary deployable anywhere.}
-      \resumeItemListEnd
+    \resumeSubheading {Fawna}{\href{https://github.com/notxorand/fawna}{github.com/notxorand/fawna} \,$\cdot$\, 2026 -- Present}
+    {Author}{Open Source} \resumeItemListStart \resumeItem{Extracted and open-sourced the TSDB engine from a previous version of Slung (see the work tree: \href{https://github.com/slunghq/slung/tree/802bc063377ddda9734b7ee12099991f696dee95}{here}) as a standalone embeddable library written entirely in Zig.}
+    \resumeItem{Achieves a sustained ingestion throughput of 6M write operations per second on commodity hardware, with range queries resolving in 5--6ms over 1M-point windows.}
+    \resumeItem{Optimised on-disk layout to 9.13 bytes/point using Gorilla-style delta compression and custom bloom filters.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Fawna}{\href{https://github.com/notxorand/fawna}{github.com/notxorand/fawna} \,$\cdot$\, 2026 -- Present}
-      {Author}{Open Source}
-      \resumeItemListStart
-        \resumeItem{Extracted and open-sourced the TSDB engine from a previous version of Slung (see the work tree: \href{https://github.com/slunghq/slung/tree/802bc063377ddda9734b7ee12099991f696dee95}{here}) as a standalone embeddable library written entirely in Zig.}
-        \resumeItem{Achieves a sustained ingestion throughput of 6M write operations per second on commodity hardware, with range queries resolving in 5--6ms over 1M-point windows.}
-        \resumeItem{Optimised on-disk layout to 9.13 bytes/point using Gorilla-style delta compression and custom bloom filters.}
-      \resumeItemListEnd
+    \resumeSubheading {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz}{github.com/s3ndotxyz} \,$\cdot$\, 2024 -- 2025}
+    {Co-Founder \& Core Engineer}{Remote} \resumeItemListStart \resumeItem{Co-designed and engineered Slipstream, a stateless, serverless runtime inside Intel SGX Trusted Execution Environments (TEEs) in Rust.}
+    \resumeItem{Architected hardware-isolated compute boundaries to enforce strict zero-trust execution guarantees across multi-tenant workloads.}
+    \resumeItem{Designed high-throughput memory isolation interfaces with zero runtime overhead.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz}{github.com/s3ndotxyz} \,$\cdot$\, 2024 -- 2025}
-      {Co-Founder \& Core Engineer}{Remote}
-      \resumeItemListStart
-        \resumeItem{Co-designed and engineered Slipstream, a stateless, serverless runtime inside Intel SGX Trusted Execution Environments (TEEs) in Rust.}
-        \resumeItem{Architected hardware-isolated compute boundaries to enforce strict zero-trust execution guarantees across multi-tenant workloads.}
-        \resumeItem{Designed high-throughput memory isolation interfaces with zero runtime overhead.}
-      \resumeItemListEnd
+    \resumeSubheading {The Forge}{\href{https://github.com/0xZeroLabs/the-forge}{github.com/0xZeroLabs/the-forge} \,$\cdot$\, 2024}
+    {Co-Author}{Open Source} \resumeItemListStart \resumeItem{Built an EigenLayer Actively Validated Service (AVS) in Rust and Solidity to register Web2 sessions as verifiable IP on Story Protocol.}
+    \resumeItem{Used SP1 zkVM to compile execution traces into zero-knowledge (ZK) proofs for trustless on-chain verification.}
+    \resumeItem{Integrated TLSNotary to cryptographically extract HTTP session transcripts without exposing underlying private data.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {The Forge}{\href{https://github.com/0xZeroLabs/the-forge}{github.com/0xZeroLabs/the-forge} \,$\cdot$\, 2024}
-      {Co-Author}{Open Source}
-      \resumeItemListStart
-        \resumeItem{Built an EigenLayer Actively Validated Service (AVS) in Rust and Solidity to register Web2 sessions as verifiable IP on Story Protocol.}
-        \resumeItem{Used SP1 zkVM to compile execution traces into zero-knowledge (ZK) proofs for trustless on-chain verification.}
-        \resumeItem{Integrated TLSNotary to cryptographically extract HTTP session transcripts without exposing underlying private data.}
-      \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-  \resumeSubHeadingListEnd
+    %-----------OTHER EXPERIENCE-----------
+    \section{Other Experience}
+    \resumeSubHeadingListStart
 
-%-----------OTHER EXPERIENCE-----------
-\section{Other Experience}
-  \resumeSubHeadingListStart
+    \resumeSubheading {Thena.fi}{02/2024 -- 03/2024} {Contract Backend Engineer}{Remote}
+    \resumeItemListStart \resumeItem{Designed and shipped a greenfield wallet-based authentication protocol for the Arena product line.}
+    \resumeItem{Diagnosed and resolved a critical performance regression on the frontend layer, measurably reducing user drop-off.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Thena.fi}{02/2024 -- 03/2024}
-      {Contract Backend Engineer}{Remote}
-      \resumeItemListStart
-        \resumeItem{Designed and shipped a greenfield wallet-based authentication protocol for the Arena product line.}
-        \resumeItem{Diagnosed and resolved a critical performance regression on the frontend layer, measurably reducing user drop-off.}
-      \resumeItemListEnd
+    \resumeSubheading {Hyli}{\href{https://github.com/hyli-org/hyli}{github.com/hyli-org/hyli} \,$\cdot$\, 2024 -- 2025}
+    {Core Contributor}{Open Source} \resumeItemListStart \resumeItem{Contributed low-level code to expose granular transactional and settlement failure indicators at the protocol layer.}
+    \resumeItem{Overhauled the structured logger for improved observability and resolved several complex multi-threaded bugs.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Hyli}{\href{https://github.com/hyli-org/hyli}{github.com/hyli-org/hyli} \,$\cdot$\, 2024 -- 2025}
-      {Core Contributor}{Open Source}
-      \resumeItemListStart
-        \resumeItem{Contributed low-level code to expose granular transactional and settlement failure indicators at the protocol layer.}
-        \resumeItem{Overhauled the structured logger for improved observability and resolved several complex multi-threaded bugs.}
-      \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-  \resumeSubHeadingListEnd
+    %-----------TECHNICAL SKILLS-----------
+    \section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{ \textbf{Systems \& Architecture:}{ Rust, Zig, Go, WebAssembly, Intel SGX TEEs, Docker, Nix, NixOS (Linux)} \\ \vspace{2pt} \textbf{Web \& Tooling:}{ TypeScript, Vue, Git, \LaTeX} \\ \vspace{2pt} \textbf{Spoken Languages:}{ English (Native), German (Intermediate), French (Beginner)} }}
+    \end{itemize}
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Systems \& Architecture:}{ Rust, Zig, Go, WebAssembly, Intel SGX TEEs, Docker, Nix, NixOS (Linux)} \\ \vspace{2pt}
-     \textbf{Web \& Tooling:}{ TypeScript, Vue, Git, \LaTeX} \\ \vspace{2pt}
-     \textbf{Spoken Languages:}{ English (Native), German (Intermediate), French (Beginner)}
-    }}
- \end{itemize}
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Benin}{2024 -- Present}
-      {Bachelor of Engineering (B.Eng.) in Mechatronics Engineering}{Hybrid}
-  \resumeSubHeadingListEnd
-
+    %-----------EDUCATION-----------
+    \section{Education}
+    \resumeSubHeadingListStart \resumeSubheading {University of Benin}{2024 -- Present}
+    {Bachelor of Engineering (B.Eng.) in Mechatronics Engineering}{Hybrid}
+    \resumeSubHeadingListEnd
 \end{document}
