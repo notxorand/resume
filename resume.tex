@@ -68,6 +68,11 @@
     \resumeItem{Added support for io\_uring ATTACH\_WQ so several rings can share an existing IO work queue.}
     \resumeItemListEnd
 
+    \resumeSubheading {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz/runtime}{github.com/s3ndotxyz/runtime} \,$\cdot$\, 2024 -- 2025}
+    {Co-Founder \& Core Engineer}{Remote} \resumeItemListStart \resumeItem{Co-designed and engineered Slipstream, a stateless, runtime inside Intel SGX Trusted Execution Environments (TEEs) in Rust.}
+    \resumeItem{Designed high-throughput memory isolation interfaces with minimal runtime overhead.}
+    \resumeItemListEnd
+
     \resumeSubheading {Slung}{\href{https://slung.tech}{slung.tech} \,$\cdot$\, 2026 -- Present}
     {Core Maintainer \& Co-Author}{Open Source} \resumeItemListStart \resumeItem{Designed an Entity Component System (ECS) runtime where external data sources (Postgres, Kafka, NATS, HTTP) are mapped to typed components at ingest, with a capability graph built at load time to route fact changes to only the rules that watch them.}
     \resumeItem{Built a forward-chaining inference engine with dirty-driven agenda scheduling and causal conflict resolution (priority-based inhibition via a CausalTag), avoiding full re-evaluation on every fact update.}
@@ -79,12 +84,6 @@
     {Author}{Open Source} \resumeItemListStart \resumeItem{Extracted and open-sourced the TSDB engine from a previous version of Slung (see the work tree: \href{https://github.com/slunghq/slung/tree/802bc063377ddda9734b7ee12099991f696dee95}{here}) as a standalone embeddable library written entirely in Zig.}
     \resumeItem{Achieves a sustained ingestion throughput of 6M write operations per second on commodity hardware, with range queries resolving in 5--6ms over 1M-point windows.}
     \resumeItem{Optimised on-disk layout to 9.13 bytes/point using Gorilla-style delta compression and custom bloom filters.}
-    \resumeItemListEnd
-
-    \resumeSubheading {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz}{github.com/s3ndotxyz} \,$\cdot$\, 2024 -- 2025}
-    {Co-Founder \& Core Engineer}{Remote} \resumeItemListStart \resumeItem{Co-designed and engineered Slipstream, a stateless, runtime inside Intel SGX Trusted Execution Environments (TEEs) in Rust.}
-    \resumeItem{Architected hardware-isolated compute boundaries to enforce strict zero-trust execution guarantees across multi-tenant workloads.}
-    \resumeItem{Designed high-throughput memory isolation interfaces with minimal runtime overhead.}
     \resumeItemListEnd
 
     \resumeSubHeadingListEnd
