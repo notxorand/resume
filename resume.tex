@@ -56,11 +56,11 @@
 \begin{document}
     %----------HEADING----------
     \begin{center}
-        {\Huge {\textbf{Ewanretor Giwa-Okugbe}} \\ \vspace{6pt} \small \href{mailto:ewanretorokugbe@gmail.com}{ewanretorokugbe@gmail.com} \,$\cdot$\, \href{https://github.com/notxorand}{github.com/notxorand} \,$\cdot$\, \href{https://notxorand.dev}{notxorand.dev} \,$\cdot$\, \href{https://linkedin.com/in/ewanretorokugbe}{linkedin.com/in/ewanretorokugbe} \\ \vspace{2pt} \small \textbf{Remote (GMT+1/CET/CEST) $\cdot$ Open to Relocation} }
+        {\Huge {\textbf{Ewanretor Giwa-Okugbe}} \\ \vspace{6pt} \small \href{mailto:ewanretorokugbe@gmail.com}{ewanretorokugbe@gmail.com} \,$\cdot$\, \href{https://github.com/notxorand}{github.com/notxorand} \,$\cdot$\, \href{https://notxorand.dev}{notxorand.dev} \,$\cdot$\, \href{https://linkedin.com/in/ewanretorokugbe}{linkedin.com/in/ewanretorokugbe} \\ \vspace{2pt} \small \textbf{Remote (GMT+1/CET/BST) $\cdot$ Open to Relocation} }
     \end{center}
 
     %-----------SYSTEMS ENGINEERING-----------
-    \section{Systems Engineering Experience}
+    \section{Open Source (Systems)}
     \resumeSubHeadingListStart
 
     \resumeSubheading {ZIO}{\href{https://github.com/lalinsky/zio}{github.com/lalinsky/zio} \,$\cdot$\, 2026 -- Present}
@@ -68,13 +68,8 @@
     \resumeItem{Added support for io\_uring ATTACH\_WQ so several rings can share an existing IO work queue.}
     \resumeItemListEnd
 
-    \resumeSubheading {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz/runtime}{github.com/s3ndotxyz/runtime} \,$\cdot$\, 2024 -- 2025}
-    {Co-Founder \& Core Engineer}{Remote} \resumeItemListStart \resumeItem{Co-designed and engineered Slipstream, a stateless, runtime inside Intel SGX Trusted Execution Environments (TEEs) in Rust.}
-    \resumeItem{Designed high-throughput memory isolation interfaces with minimal runtime overhead.}
-    \resumeItemListEnd
-
     \resumeSubheading {Slung}{\href{https://slung.tech}{slung.tech} \,$\cdot$\, 2026 -- Present}
-    {Core Maintainer \& Co-Author}{Open Source} \resumeItemListStart \resumeItem{Designed an Entity Component System (ECS) runtime where external data sources (Postgres, Kafka, NATS, HTTP) are mapped to typed components at ingest, with a capability graph built at load time to route fact changes to only the rules that watch them.}
+    {Author}{Open Source} \resumeItemListStart \resumeItem{Designed an Entity Component System (ECS) runtime where external data sources (Postgres, Kafka, NATS, HTTP) are mapped to typed components at ingest, with a capability graph built at load time to route fact changes to only the rules that watch them.}
     \resumeItem{Built a forward-chaining inference engine with dirty-driven agenda scheduling and causal conflict resolution (priority-based inhibition via a CausalTag), avoiding full re-evaluation on every fact update.}
     \resumeItem{Developed a compiler pipeline that translates rules down to WebAssembly targets for language-agnostic, edge-deployable execution.}
     \resumeItem{Wrote an accompanying Rust SDK to \href{https://docs.rs/slung}{docs.rs/slung}; ships as a lightweight single binary deployable anywhere.}
@@ -90,19 +85,15 @@
 
     %-----------OTHER EXPERIENCE-----------
     \section{Other Experience}
-    \resumeSubHeadingListStart
+    \resumeSubHeadingListStart \resumeSubheading {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz/runtime}{github.com/s3ndotxyz/runtime} \,$\cdot$\, 2024 -- 2025}
+    {Co-Founder \& Core Engineer}{Remote} \resumeItemListStart \resumeItem{Co-designed and engineered Slipstream, a stateless, runtime inside Intel SGX Trusted Execution Environments (TEEs) in Rust.}
+    \resumeItem{Designed high-throughput memory isolation interfaces with minimal runtime overhead.}
+    \resumeItemListEnd
 
     \resumeSubheading {Thena.fi}{02/2024 -- 03/2024} {Contract Backend Engineer}{Remote}
     \resumeItemListStart \resumeItem{Designed and shipped a greenfield wallet-based authentication protocol for the Arena product line.}
     \resumeItem{Diagnosed and resolved a critical performance regression on the frontend layer, measurably reducing user drop-off.}
-    \resumeItemListEnd
-
-    \resumeSubheading {Hyli}{\href{https://github.com/hyli-org/hyli}{github.com/hyli-org/hyli} \,$\cdot$\, 2025}
-    {Open Source Contributor}{Open Source} \resumeItemListStart \resumeItem{Contributed low-level code to expose granular transactional and settlement failure indicators at the protocol layer.}
-    \resumeItem{Overhauled the structured logger for improved observability and resolved several complex multi-threaded bugs.}
-    \resumeItemListEnd
-
-    \resumeSubHeadingListEnd
+    \resumeItemListEnd \resumeSubHeadingListEnd
 
     %-----------TECHNICAL SKILLS-----------
     \section{Technical Skills}
