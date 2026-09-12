@@ -1,0 +1,129 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{geometry}
+
+\definecolor{royalblue}{RGB}{0, 102, 204}
+\definecolor{carbongray}{RGB}{84, 84, 84}
+\definecolor{hypertext}{RGB}{0, 0, 255}
+
+\usepackage[colorlinks=true, linkcolor=hypertext, urlcolor=hypertext]{hyperref}
+
+% Adjust margins
+\geometry{left=0.6in, top=0.5in, right=0.6in, bottom=0.5in}
+
+\urlstyle{same}
+
+% Stack line shown under each project/role heading
+\newcommand{\stackline}[1]{\vspace{-3pt}\hspace{0.02in}{\footnotesize\color{carbongray}\textbf{Tech:} #1}\\[3pt]} % Tech stack line
+
+\raggedbottom
+\raggedright
+
+% Sections formatting
+\titleformat{\section}{ \vspace{-7pt}\scshape\raggedright\large\bfseries }{}{0em}{}[
+\color{black}
+\titlerule
+\vspace{-4pt}
+]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}
+\item
+\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1}       & #2                 \\
+    \textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{ \item
+\begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+\end{tabular*}
+\vspace{-6pt}
+}
+
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-4pt}}
+
+\begin{document}
+    %----------HEADING----------
+    \begin{center}
+        {\Huge {\textbf{Ewanretor Giwa-Okugbe}} \\ \vspace{6pt} \small \href{mailto:ewanretorokugbe@gmail.com}{ewanretorokugbe@gmail.com} \,$\cdot$\, \href{https://github.com/notxorand}{github.com/notxorand} \,$\cdot$\, \href{https://notxorand.dev}{notxorand.dev} \,$\cdot$\, \href{https://linkedin.com/in/ewanretorokugbe}{linkedin.com/in/ewanretorokugbe} \\ \vspace{2pt} \small \textbf{Software Engineer -- Distributed Systems \& High-Throughput Services} \\ \vspace{2pt} \small \textbf{Remote (GMT+1/CET/BST)} }
+    \end{center}
+
+    %-----------SUMMARY-----------
+    \section{Summary}
+    \small{Software engineer with production delivery experience (wallet-auth protocol, performance fixes shipped for a live product) and deep systems fundamentals from independent distributed-systems work -- high-throughput storage engines, message-queue integration, and concurrency-safe scheduling. Comfortable owning a service end-to-end: API, data layer, and the performance/concurrency issues underneath it.}
+
+    %-----------EXPERIENCE-----------
+    \section{Experience}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading {Thena}{\href{https://thena.fi}{thena.fi} \,$\cdot$\, 02/2024 -- 03/2024 $\cdot$ Remote}
+    {Contract Backend Engineer}{TypeScript, Postgres, Solidity}
+    \resumeItemListStart \resumeItem{Designed and shipped a greenfield wallet-based authentication protocol for the Arena product line, taken from design to production.}
+    \resumeItem{Diagnosed and resolved a critical frontend performance regression, measurably reducing user drop-off -- root-caused under live product pressure.}
+    \resumeItemListEnd
+
+    \resumeSubheading {ZERO Labs Ltd}{\href{https://github.com/s3ndotxyz/runtime}{github.com/s3ndotxyz/runtime} \,$\cdot$\, 2024 -- 2025 $\cdot$ Hybrid}
+    {Co-Founder \& Core Engineer}{Rust, Intel SGX TEEs, Nix, Linux}
+    \resumeItemListStart \resumeItem{Co-designed and engineered Slipstream, a stateless backend runtime deployed inside Intel SGX Trusted Execution Environments, serving confidential-compute workloads for external users.}
+    \resumeItem{Designed high-throughput memory isolation interfaces between untrusted and trusted execution contexts with minimal overhead -- backend infrastructure work under strict correctness constraints.}
+    \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+    %-----------INDEPENDENT BACKEND & SYSTEMS PROJECTS-----------
+    \section{Systems Projects \& Open Source Contributions}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading {Slung}{\href{https://slung.tech}{slung.tech} \,$\cdot$\, 2026 -- Present}
+    {Founder}{Zig, Nix, Go, Rust, WebAssembly, Postgres, Kafka, NATS}
+    \resumeItemListStart \resumeItem{\textbf{Distributed backend integration:} built a rules engine ingesting live changes from HTTP, WebSocket, Postgres, Kafka, and NATS sources, routing each update only to the rules it affects instead of recomputing on every change.}
+    \resumeItem{\textbf{Cross-service portability:} compiled rule logic to WebAssembly so the same module runs unmodified across services and deployments; shipped \href{https://docs.rs/slung}{Rust} and \href{https://github.com/slunghq/slung/tree/dev/sdks/go}{Go} SDKs for integration.}
+    \resumeItemListEnd
+
+    \resumeSubheading {Fawna}{\href{https://github.com/notxorand/fawna}{github.com/notxorand/fawna} \,$\cdot$\, 2026 -- Present}
+    {Author}{Zig, Nix}
+    \resumeItemListStart \resumeItem{\textbf{Performance:} built a time-series storage engine handling 6M writes/sec on commodity hardware, with range queries returning in 5--6ms across million-point windows.}
+    \resumeItem{\textbf{Efficiency:} cut on-disk storage to roughly 9 bytes/point using Gorilla-style delta compression and custom bloom filters; extracted into a standalone, embeddable library.}
+    \resumeItemListEnd
+
+    \resumeSubheading {ZIO}{\href{https://github.com/lalinsky/zio}{github.com/lalinsky/zio} \,$\cdot$\, 2026 -- Present}
+    {Open Source Contributor}{Zig, io\_uring}
+    \resumeItemListStart \resumeItem{\textbf{Concurrency correctness:} designed and implemented a work-stealing scheduler for zio's executor pool, using an atomic \textit{idle\_mask} and single-searcher coordination to guarantee no lost wakeups and no duplicate concurrent searches under concurrent park/steal/push races.}
+    \resumeItem{\textbf{Throughput:} added support for io\_uring ATTACH\_WQ so multiple rings share one IO work queue, reducing per-connection kernel overhead -- directly relevant to high-concurrency API servers.}
+    \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+    %-----------TECHNICAL SKILLS-----------
+    \section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{ \textbf{Backend \& Data:}{ Postgres, Kafka, NATS, SQL, REST API design, WebAssembly, Docker, RabbitMQ} \\ \vspace{2pt} \textbf{Languages:}{ Rust, Zig, Go, TypeScript, SQL} \\ \vspace{2pt} \textbf{Systems \& Tooling:}{ Intel SGX TEEs, Nix, NixOS (Linux), Git, Vue, \LaTeX} \\ \vspace{2pt} \textbf{Spoken Languages:}{ English (Native), German (Intermediate), French (Beginner)} }}
+    \end{itemize}
+
+    % %-----------EDUCATION-----------
+    \section{Education}
+    \resumeSubHeadingListStart \resumeSubheading {University of Benin}{2024 -- Present (Expected 2029)}
+    {Bachelor of Engineering (B.Eng.) in Mechatronics Engineering}{Full-time}
+    \resumeItemListStart \resumeItem{All professional and open-source work listed above was completed concurrently with full-time study.}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\end{document}
